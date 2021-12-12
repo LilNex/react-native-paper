@@ -20,9 +20,9 @@ let MaterialCommunityIcons: React.ComponentType<
 
 try {
   // Optionally require vector-icons
-  MaterialCommunityIcons = require('react-native-vector-icons/MaterialCommunityIcons')
-    .default;
-} catch (e) {
+  MaterialCommunityIcons =
+    require('react-native-vector-icons/MaterialCommunityIcons').default;
+} catch (e: any) {
   let isErrorLogged = false;
 
   // Fallback component for icons
@@ -67,7 +67,8 @@ export const accessibilityProps =
       }
     : {
         accessibilityElementsHidden: true,
-        importantForAccessibility: 'no-hide-descendants' as 'no-hide-descendants',
+        importantForAccessibility:
+          'no-hide-descendants' as 'no-hide-descendants',
       };
 
 const defaultIcon = ({
