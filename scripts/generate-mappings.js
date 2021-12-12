@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const types = require('babel-types');
+const types = require('@babel/types');
 const parser = require('@babel/parser');
 
 const packageJson = require('../package.json');
