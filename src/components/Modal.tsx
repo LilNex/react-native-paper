@@ -14,9 +14,9 @@ import {
   getStatusBarHeight,
   getBottomSpace,
 } from 'react-native-iphone-x-helper';
-import Surface from './Surface';
 import { useTheme } from '../core/theming';
 import useAnimatedValue from '../utils/useAnimatedValue';
+import Surface from './Surface';
 
 type Props = {
   /**
@@ -228,9 +228,11 @@ export default function Modal({
       >
         <Surface
           style={
-            [{ opacity }, styles.content, contentContainerStyle] as StyleProp<
-              ViewStyle
-            >
+            [
+              { opacity },
+              styles.content,
+              contentContainerStyle,
+            ] as StyleProp<ViewStyle>
           }
         >
           {children}

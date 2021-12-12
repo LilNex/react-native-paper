@@ -1,15 +1,14 @@
+import { RadioButton } from 'react-native-paper';
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
-import { RadioButton } from 'react-native-paper';
 import ScreenWrapper from '../ScreenWrapper';
 
 const RadioButtonItemExample = () => {
   const [checkedDefault, setCheckedDefault] = React.useState<boolean>(true);
   const [checkedAndroid, setCheckedAndroid] = React.useState<boolean>(true);
   const [checkedIOS, setCheckedIOS] = React.useState<boolean>(true);
-  const [checkedLeadingControl, setCheckedLeadingControl] = React.useState<
-    boolean
-  >(true);
+  const [checkedLeadingControl, setCheckedLeadingControl] =
+    React.useState<boolean>(true);
 
   return (
     <ScreenWrapper style={styles.container}>

@@ -1,7 +1,8 @@
+import { Caption, List, Text, Chip, Divider } from 'react-native-paper';
 import * as React from 'react';
 import { StyleSheet, Image, View } from 'react-native';
-import { Caption, List, Text, Chip, Divider } from 'react-native-paper';
 import ScreenWrapper from '../ScreenWrapper';
+
 const ListSectionExample = () => {
   return (
     <ScreenWrapper>
@@ -27,6 +28,7 @@ const ListSectionExample = () => {
         <List.Item
           left={() => (
             <Image
+              accessibilityIgnoresInvertColors
               source={require('../../assets/images/email-icon.png')}
               style={styles.image}
             />
@@ -37,6 +39,7 @@ const ListSectionExample = () => {
         <List.Item
           left={() => (
             <Image
+              accessibilityIgnoresInvertColors
               source={require('../../assets/images/email-icon.png')}
               style={styles.image}
             />
@@ -52,6 +55,7 @@ const ListSectionExample = () => {
         <List.Item
           left={() => (
             <Image
+              accessibilityIgnoresInvertColors
               source={require('../../assets/images/email-icon.png')}
               style={styles.image}
             />
@@ -62,6 +66,7 @@ const ListSectionExample = () => {
         <List.Item
           left={() => (
             <Image
+              accessibilityIgnoresInvertColors
               source={require('../../assets/images/email-icon.png')}
               style={styles.image}
             />
@@ -77,6 +82,7 @@ const ListSectionExample = () => {
         <List.Item
           left={() => (
             <Image
+              accessibilityIgnoresInvertColors
               source={require('../../assets/images/email-icon.png')}
               style={styles.image}
             />

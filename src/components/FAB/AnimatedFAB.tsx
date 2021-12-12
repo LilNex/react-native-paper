@@ -11,20 +11,20 @@ import {
   Text,
   Platform,
 } from 'react-native';
-import Surface from '../Surface';
-import Icon from '../Icon';
-import TouchableRipple from '../TouchableRipple/TouchableRipple';
-import { withTheme } from '../../core/theming';
-import type { $RemoveChildren } from '../../types';
-import type { IconSource } from './../Icon';
 import type {
   AccessibilityState,
   NativeSyntheticEvent,
   TextLayoutEventData,
 } from 'react-native';
+import Surface from '../Surface';
+import Icon from '../Icon';
+import TouchableRipple from '../TouchableRipple/TouchableRipple';
+import { withTheme } from '../../core/theming';
+import type { $RemoveChildren } from '../../types';
 import { white, black } from '../../styles/colors';
 import AnimatedText from '../Typography/AnimatedText';
 import getContrastingColor from '../../utils/getContrastingColor';
+import type { IconSource } from './../Icon';
 
 type Props = $RemoveChildren<typeof Surface> & {
   /**
@@ -146,9 +146,8 @@ const AnimatedFAB = ({
     .rgb()
     .string();
 
-  const {
-    backgroundColor = disabled ? disabledColor : theme.colors.accent,
-  } = (StyleSheet.flatten(style) || {}) as ViewStyle;
+  const { backgroundColor = disabled ? disabledColor : theme.colors.accent } =
+    (StyleSheet.flatten(style) || {}) as ViewStyle;
 
   let foregroundColor;
 

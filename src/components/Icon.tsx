@@ -6,8 +6,8 @@ import {
   ImageSourcePropType,
 } from 'react-native';
 import { Consumer as SettingsConsumer } from '../core/settings';
-import { accessibilityProps } from './MaterialCommunityIcon';
 import { withTheme } from '../core/theming';
+import { accessibilityProps } from './MaterialCommunityIcon';
 
 type IconSourceBase = string | ImageSourcePropType;
 
@@ -98,6 +98,7 @@ const Icon = ({ source, color, size, theme, ...rest }: Props) => {
           },
         ]}
         {...accessibilityProps}
+        accessibilityIgnoresInvertColors
       />
     );
   } else if (typeof s === 'string') {

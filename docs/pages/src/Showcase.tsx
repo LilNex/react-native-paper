@@ -147,7 +147,7 @@ export default function Showcase() {
             return (
               <div key={item.image}>
                 <ImageContainer>
-                  <Image src={item.image} alt="" />
+                  <Img src={item.image} alt="" />
                   <Info style={{ backgroundColor: item.color }}>
                     <AppName
                       style={{
@@ -243,7 +243,7 @@ const ImageContainer = styled.div`
   }
 `;
 
-const Image = styled.img`
+const Img = styled.img`
   display: block;
   max-height: 480px;
   width: auto;

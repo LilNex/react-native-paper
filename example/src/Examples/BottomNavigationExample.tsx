@@ -1,6 +1,6 @@
+import { BottomNavigation } from 'react-native-paper';
 import * as React from 'react';
 import { View, Image, Dimensions, StyleSheet, Platform } from 'react-native';
-import { BottomNavigation } from 'react-native-paper';
 import ScreenWrapper from '../ScreenWrapper';
 
 type RoutesState = Array<{
@@ -24,7 +24,11 @@ const PhotoGallery = ({ route }: Route) => {
     <ScreenWrapper contentContainerStyle={styles.content}>
       {PHOTOS.map((uri) => (
         <View key={uri} style={styles.item}>
-          <Image source={{ uri }} style={styles.photo} />
+          <Image
+            source={{ uri }}
+            style={styles.photo}
+            accessibilityIgnoresInvertColors
+          />
         </View>
       ))}
     </ScreenWrapper>

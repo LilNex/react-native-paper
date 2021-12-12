@@ -1,5 +1,3 @@
-import * as React from 'react';
-import { Alert, ScrollView, StyleSheet, View } from 'react-native';
 import {
   Avatar,
   Paragraph,
@@ -10,6 +8,8 @@ import {
   Text,
   Switch,
 } from 'react-native-paper';
+import * as React from 'react';
+import { Alert, ScrollView, StyleSheet, View } from 'react-native';
 import ScreenWrapper from '../ScreenWrapper';
 
 const CardExample = () => {

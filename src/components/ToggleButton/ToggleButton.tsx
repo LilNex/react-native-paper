@@ -5,12 +5,12 @@ import {
   ViewStyle,
   GestureResponderEvent,
 } from 'react-native';
-import { withTheme } from '../../core/theming';
 import color from 'color';
+import { withTheme } from '../../core/theming';
 import IconButton from '../IconButton';
-import { ToggleButtonGroupContext } from './ToggleButtonGroup';
 import { black, white } from '../../styles/colors';
 import type { IconSource } from '../Icon';
+import { ToggleButtonGroupContext } from './ToggleButtonGroup';
 
 type Props = {
   /**

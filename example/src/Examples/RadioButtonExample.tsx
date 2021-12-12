@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
 import {
   Paragraph,
   RadioButton,
   Colors,
   TouchableRipple,
 } from 'react-native-paper';
+import * as React from 'react';
+import { View, StyleSheet } from 'react-native';
 import ScreenWrapper from '../ScreenWrapper';
 
 type State = 'normal' | 'normal-ios' | 'normal-item' | 'custom';

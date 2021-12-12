@@ -5,12 +5,12 @@ import {
   ColorSchemeName,
   NativeEventSubscription,
 } from 'react-native';
-import { ThemeProvider } from './theming';
-import { Provider as SettingsProvider, Settings } from './settings';
 import MaterialCommunityIcon from '../components/MaterialCommunityIcon';
 import PortalHost from '../components/Portal/PortalHost';
 import DefaultTheme from '../styles/DefaultTheme';
 import DarkTheme from '../styles/DarkTheme';
+import { Provider as SettingsProvider, Settings } from './settings';
+import { ThemeProvider } from './theming';
 
 type Props = {
   children: React.ReactNode;
@@ -22,12 +22,10 @@ const Provider = ({ ...props }: Props) => {
   const colorSchemeName =
     (!props.theme && Appearance?.getColorScheme()) || 'light';
 
-  const [reduceMotionEnabled, setReduceMotionEnabled] = React.useState<boolean>(
-    false
-  );
-  const [colorScheme, setColorScheme] = React.useState<ColorSchemeName>(
-    colorSchemeName
-  );
+  const [reduceMotionEnabled, setReduceMotionEnabled] =
+    React.useState<boolean>(false);
+  const [colorScheme, setColorScheme] =
+    React.useState<ColorSchemeName>(colorSchemeName);
 
   const handleAppearanceChange = (
     preferences: Appearance.AppearancePreferences
@@ -83,9 +81,9 @@ const Provider = ({ ...props }: Props) => {
     if (providedTheme) {
       return providedTheme;
     } else {
-      const theme = (colorScheme === 'dark'
-        ? DarkTheme
-        : DefaultTheme) as ReactNativePaper.Theme;
+      const theme = (
+        colorScheme === 'dark' ? DarkTheme : DefaultTheme
+      ) as ReactNativePaper.Theme;
 
       return {
         ...theme,

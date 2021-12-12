@@ -7,10 +7,10 @@ import {
   ViewStyle,
 } from 'react-native';
 import overlay from '../../styles/overlay';
-import { DEFAULT_APPBAR_HEIGHT, Appbar } from './Appbar';
 import shadow from '../../styles/shadow';
 import { withTheme } from '../../core/theming';
 import { APPROX_STATUSBAR_HEIGHT } from '../../constants';
+import { DEFAULT_APPBAR_HEIGHT, Appbar } from './Appbar';
 
 type Props = React.ComponentProps<typeof Appbar> & {
   /**

@@ -1,6 +1,6 @@
+import { Button, ProgressBar, Paragraph, Colors } from 'react-native-paper';
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Button, ProgressBar, Paragraph, Colors } from 'react-native-paper';
 import ScreenWrapper from '../ScreenWrapper';
 
 const ProgressBarExample = () => {

@@ -2,13 +2,13 @@ import * as React from 'react';
 import { View, ViewStyle, Platform, StyleSheet, StyleProp } from 'react-native';
 import color from 'color';
 
-import AppbarContent from './AppbarContent';
-import AppbarAction from './AppbarAction';
-import AppbarBackAction from './AppbarBackAction';
 import Surface from '../Surface';
 import { withTheme } from '../../core/theming';
 import { black, white } from '../../styles/colors';
 import overlay from '../../styles/overlay';
+import AppbarBackAction from './AppbarBackAction';
+import AppbarAction from './AppbarAction';
+import AppbarContent from './AppbarContent';
 
 type Props = Partial<React.ComponentPropsWithRef<typeof View>> & {
   /**

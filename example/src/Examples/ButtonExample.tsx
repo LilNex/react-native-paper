@@ -1,6 +1,6 @@
+import { Button, List, useTheme } from 'react-native-paper';
 import * as React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
-import { Button, List, useTheme } from 'react-native-paper';
 import ScreenWrapper from '../ScreenWrapper';
 
 const ButtonExample = () => {
@@ -131,8 +131,7 @@ const ButtonExample = () => {
           <Button
             mode="outlined"
             icon={{
-              uri:
-                'https://avatars0.githubusercontent.com/u/17571969?v=3&s=400',
+              uri: 'https://avatars0.githubusercontent.com/u/17571969?v=3&s=400',
             }}
             onPress={() => {}}
             style={styles.button}
@@ -151,6 +150,7 @@ const ButtonExample = () => {
             mode="outlined"
             icon={({ size }) => (
               <Image
+                accessibilityIgnoresInvertColors
                 source={require('../../assets/images/chameleon.jpg')}
                 style={{ width: size, height: size, borderRadius: size / 2 }}
               />

@@ -1,3 +1,8 @@
+import {
+  Provider as PaperProvider,
+  DarkTheme,
+  DefaultTheme,
+} from 'react-native-paper';
 import * as React from 'react';
 import { I18nManager, Platform } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -6,14 +11,9 @@ import { useKeepAwake } from 'expo-keep-awake';
 import { StatusBar } from 'expo-status-bar';
 import { InitialState, NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import {
-  Provider as PaperProvider,
-  DarkTheme,
-  DefaultTheme,
-} from 'react-native-paper';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import App from './RootNavigator';
 import DrawerItems from './DrawerItems';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 // Add new typescript properties to the theme
 declare global {
@@ -97,9 +97,8 @@ export default function PaperExample() {
     InitialState | undefined
   >();
 
-  const [theme, setTheme] = React.useState<ReactNativePaper.Theme>(
-    CustomDefaultTheme
-  );
+  const [theme, setTheme] =
+    React.useState<ReactNativePaper.Theme>(CustomDefaultTheme);
   const [rtl, setRtl] = React.useState<boolean>(I18nManager.isRTL);
 
   React.useEffect(() => {

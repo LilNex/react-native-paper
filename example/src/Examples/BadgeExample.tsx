@@ -1,5 +1,3 @@
-import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
 import {
   Badge,
   IconButton,
@@ -8,6 +6,8 @@ import {
   Switch,
   Colors,
 } from 'react-native-paper';
+import * as React from 'react';
+import { View, StyleSheet } from 'react-native';
 import ScreenWrapper from '../ScreenWrapper';
 
 const BadgeExample = () => {

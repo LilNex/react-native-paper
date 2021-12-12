@@ -8,10 +8,10 @@ import {
   View,
 } from 'react-native';
 
+import { withTheme } from '../core/theming';
 import Button from './Button';
 import Surface from './Surface';
 import Text from './Typography/Text';
-import { withTheme } from '../core/theming';
 
 export type SnackbarProps = React.ComponentProps<typeof Surface> & {
   /**
@@ -144,10 +144,10 @@ const Snackbar = ({
             duration === Number.NEGATIVE_INFINITY;
 
           if (finished && !isInfinity) {
-            hideTimeout.current = (setTimeout(
+            hideTimeout.current = setTimeout(
               onDismiss,
               duration
-            ) as unknown) as NodeJS.Timeout;
+            ) as unknown as NodeJS.Timeout;
           }
         }
       });

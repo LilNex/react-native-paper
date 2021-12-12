@@ -12,17 +12,17 @@ import {
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 import color from 'color';
 import overlay from '../styles/overlay';
-import Icon, { IconSource } from './Icon';
-import Surface from './Surface';
-import Badge from './Badge';
-import TouchableRipple from './TouchableRipple/TouchableRipple';
-import Text from './Typography/Text';
 import { black, white } from '../styles/colors';
 import { withTheme } from '../core/theming';
 import useAnimatedValue from '../utils/useAnimatedValue';
 import useAnimatedValueArray from '../utils/useAnimatedValueArray';
 import useLayout from '../utils/useLayout';
 import useIsKeyboardShown from '../utils/useIsKeyboardShown';
+import Text from './Typography/Text';
+import TouchableRipple from './TouchableRipple/TouchableRipple';
+import Badge from './Badge';
+import Surface from './Surface';
+import Icon, { IconSource } from './Icon';
 
 type Route = {
   key: string;

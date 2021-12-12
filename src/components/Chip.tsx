@@ -11,15 +11,15 @@ import {
   ViewStyle,
 } from 'react-native';
 import color from 'color';
+import { withTheme } from '../core/theming';
+import { black, white } from '../styles/colors';
+import type { EllipsizeProp } from '../types';
 import type { IconSource } from './Icon';
 import Icon from './Icon';
 import MaterialCommunityIcon from './MaterialCommunityIcon';
 import Surface from './Surface';
 import Text from './Typography/Text';
 import TouchableRipple from './TouchableRipple/TouchableRipple';
-import { withTheme } from '../core/theming';
-import { black, white } from '../styles/colors';
-import type { EllipsizeProp } from '../types';
 
 type Props = React.ComponentProps<typeof Surface> & {
   /**
@@ -169,10 +169,8 @@ const Chip = ({
   const defaultBackgroundColor =
     mode === 'outlined' ? colors.surface : dark ? '#383838' : '#ebebeb';
 
-  const {
-    backgroundColor = defaultBackgroundColor,
-    borderRadius = 16,
-  } = (StyleSheet.flatten(style) || {}) as ViewStyle;
+  const { backgroundColor = defaultBackgroundColor, borderRadius = 16 } =
+    (StyleSheet.flatten(style) || {}) as ViewStyle;
 
   const borderColor =
     mode === 'outlined'
@@ -202,9 +200,10 @@ const Chip = ({
     typeof backgroundColor === 'string'
       ? backgroundColor
       : defaultBackgroundColor;
-  const selectedBackgroundColor = (dark
-    ? color(backgroundColorString).lighten(mode === 'outlined' ? 0.2 : 0.4)
-    : color(backgroundColorString).darken(mode === 'outlined' ? 0.08 : 0.2)
+  const selectedBackgroundColor = (
+    dark
+      ? color(backgroundColorString).lighten(mode === 'outlined' ? 0.2 : 0.4)
+      : color(backgroundColorString).darken(mode === 'outlined' ? 0.08 : 0.2)
   )
     .rgb()
     .string();

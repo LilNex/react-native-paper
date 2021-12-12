@@ -43,7 +43,7 @@ it('correctly renders left-side icon adornment, and right-side affix adornment',
   expect(toJSON()).toMatchSnapshot();
 });
 
-it('correctly renders left-side icon adornment, and right-side affix adornment ', () => {
+it('correctly renders left-side affix, and right-side icon adornment adornment', () => {
   const { getByText, getByTestId, toJSON } = render(
     <TextInput
       label="Flat input"

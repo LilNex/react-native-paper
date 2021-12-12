@@ -1,6 +1,6 @@
+import { Banner, FAB, useTheme } from 'react-native-paper';
 import * as React from 'react';
 import { View, StyleSheet, Image, Dimensions, Platform } from 'react-native';
-import { Banner, FAB, useTheme } from 'react-native-paper';
 import ScreenWrapper from '../ScreenWrapper';
 
 const PHOTOS = Array.from({ length: 24 }).map(
@@ -50,7 +50,11 @@ const BannerExample = () => {
         <View style={styles.grid}>
           {PHOTOS.map((uri) => (
             <View key={uri} style={styles.item}>
-              <Image source={{ uri }} style={styles.photo} />
+              <Image
+                source={{ uri }}
+                style={styles.photo}
+                accessibilityIgnoresInvertColors
+              />
             </View>
           ))}
         </View>
@@ -68,9 +72,6 @@ const BannerExample = () => {
 BannerExample.title = 'Banner';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   ...Platform.select({
     web: {
       grid: {

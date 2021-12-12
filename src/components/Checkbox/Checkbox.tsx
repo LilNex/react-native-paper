@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Platform } from 'react-native';
+import { withTheme } from '../../core/theming';
 import CheckboxIOS from './CheckboxIOS';
 import CheckboxAndroid from './CheckboxAndroid';
-import { withTheme } from '../../core/theming';
 
 type Props = {
   /**

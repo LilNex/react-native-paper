@@ -246,14 +246,13 @@ class TextInputOutlined extends React.Component<ChildTextInputProps> {
       ? leftLayout.width || ADORNMENT_SIZE
       : ADORNMENT_SIZE;
 
-    const adornmentStyleAdjustmentForNativeInput = getAdornmentStyleAdjustmentForNativeInput(
-      {
+    const adornmentStyleAdjustmentForNativeInput =
+      getAdornmentStyleAdjustmentForNativeInput({
         adornmentConfig,
         rightAffixWidth,
         leftAffixWidth,
         mode: 'outlined',
-      }
-    );
+      });
     const affixTopPosition = {
       [AdornmentSide.Left]: leftAffixTopPosition,
       [AdornmentSide.Right]: rightAffixTopPosition,

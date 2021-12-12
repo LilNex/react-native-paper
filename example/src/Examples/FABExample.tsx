@@ -1,6 +1,6 @@
+import { FAB, Portal } from 'react-native-paper';
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { FAB, Portal } from 'react-native-paper';
 import ScreenWrapper from '../ScreenWrapper';
 
 const ButtonExample = () => {

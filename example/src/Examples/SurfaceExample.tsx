@@ -1,6 +1,6 @@
+import { Text, Surface } from 'react-native-paper';
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
-import { Text, Surface } from 'react-native-paper';
 import ScreenWrapper from '../ScreenWrapper';
 
 const SurfaceExample = () => {
